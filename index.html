@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcard App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="setupScreen" class="screen">
+        <h1>Setup Flashcards</h1>
+        <textarea id="cardData" placeholder="Enter question and answer pairs separated by a comma. E.g., 'Capital of France,Paris'">
+            Global Chairman and CEO, Carmine Di Sibio
+            EY CEO-elect; EY Americas Financial Services Organization Vice Chair and Regional Managing Partner, Janet Truncale
+            Global Chief Client Technology Officer, Nicola Morini Bianzino
+            Global Managing Partner - Business Enablement, Steve Krouskos
+            Global Vice Chair - Talent, Trent Henry
+            Global Vice Chair - Markets, Jay Nibbe
+            Global Vice Chair - Transformation, Hank Prybylski
+            Global Vice Chair - Tax, Marna Ricker
+            Global Vice Chair - Assurance, Marie-Laure Delarue
+            Global Vice Chair - Consulting, Errol Gardner
+            Global Vice Chair - Strategy and Transactions, Andrea Guerzoni
+            Global Managing Partner - Client Service, Andy Baldwin
+        </textarea>
+        <button onclick="saveData()">Save Data</button>
+    </div>
+
+    <div id="playScreen" class="screen" style="display:none;">
+        <h1>Test Yourself</h1>
+        <div id="card">
+            <div id="question"></div>
+            <button onclick="showAnswer()">Show Answer</button>
+            <div id="answer" style="display:none;"></div>
+        </div>
+        <button onclick="nextCard()">Next Card</button>
+        <!-- Add this button inside the playScreen div -->
+        <button onclick="goToSetup()">Back to Setup</button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
